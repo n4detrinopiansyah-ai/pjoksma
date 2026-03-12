@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Pembelajaran PJOK</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    .gradient-bg {
+      background: linear-gradient(135deg, #1e3a5f 0%, #0d2137 50%, #0a1628 100%);
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .sport-icon {
+      animation: bounce 2s ease-in-out infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    .video-card {
+      transition: all 0.3s ease;
+    }
+    .video-card:hover {
+      transform: scale(1.02);
+    }
+    .modal-backdrop {
+      backdrop-filter: blur(8px);
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+ </head>
+ <body class="h-full gradient-bg text-white overflow-auto">
+  <div class="w-full min-h-full"><!-- Header -->
+   <header class="relative overflow-hidden py-12 px-6">
+    <div class="absolute inset-0 opacity-10">
+     <div class="absolute top-10 left-10 w-32 h-32 bg-amber-400 rounded-full blur-3xl"></div>
+     <div class="absolute bottom-10 right-10 w-40 h-40 bg-cyan-400 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-6xl mx-auto text-center relative z-10">
+     <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6"><span class="text-2xl">🏫</span> <span id="school-badge" class="text-sm font-medium text-cyan-300">SMAN Taruna Nala Jawa Timur</span>
+     </div>
+     <h1 id="main-title" class="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-white via-cyan-200 to-amber-200 bg-clip-text text-transparent">Portal Pembelajaran PJOK</h1>
+     <p class="text-lg text-gray-300 mb-2">Pendidikan Jasmani, Olahraga, dan Kesehatan</p>
+     <p id="teacher-info" class="text-amber-300 font-medium">Guru Pengampu: Bapak/Ibu Guru PJOK</p>
+    </div>
+   </header><!-- Materi Section -->
+   <section class="py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-3">📚 Materi Pembelajaran</h2>
+      <p class="text-gray-400">Pilih materi yang ingin dipelajari</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8"><!-- Sepak Bola -->
+      <div class="card-hover bg-gradient-to-br from-green-900/50 to-green-950/50 rounded-2xl p-6 border border-green-700/30 animate-fade-in" style="animation-delay: 0.1s">
+       <div class="flex items-start gap-4 mb-4">
+        <div class="sport-icon text-5xl">
+         ⚽
+        </div>
+        <div>
+         <h3 class="text-2xl font-bold text-green-300 mb-2">Sepak Bola</h3><span class="inline-block bg-green-500/20 text-green-300 text-xs px-3 py-1 rounded-full">Permainan Bola Besar</span>
+        </div>
+       </div>
+       <p class="text-gray-300 text-sm leading-relaxed mb-4">Sepak bola adalah olahraga tim yang dimainkan oleh dua tim dengan masing-masing 11 pemain. Tujuan permainan adalah memasukkan bola ke gawang lawan. Materi meliputi: <strong class="text-green-200">teknik dasar (passing, dribbling, shooting)</strong>, formasi permainan, aturan pertandingan, dan strategi bermain tim.</p>
+       <div class="flex flex-wrap gap-2 mb-4"><span class="bg-green-800/50 text-green-200 text-xs px-2 py-1 rounded">Passing</span> <span class="bg-green-800/50 text-green-200 text-xs px-2 py-1 rounded">Dribbling</span> <span class="bg-green-800/50 text-green-200 text-xs px-2 py-1 rounded">Shooting</span> <span class="bg-green-800/50 text-green-200 text-xs px-2 py-1 rounded">Heading</span>
+       </div><a href="#sepakbola" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-5 py-2.5 rounded-lg transition-all"> <span>Pelajari Materi</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg></a>
+      </div><!-- Basket -->
+      <div class="card-hover bg-gradient-to-br from-orange-900/50 to-orange-950/50 rounded-2xl p-6 border border-orange-700/30 animate-fade-in" style="animation-delay: 0.2s">
+       <div class="flex items-start gap-4 mb-4">
+        <div class="sport-icon text-5xl">
+         🏀
+        </div>
+        <div>
+         <h3 class="text-2xl font-bold text-orange-300 mb-2">Bola Basket</h3><span class="inline-block bg-orange-500/20 text-orange-300 text-xs px-3 py-1 rounded-full">Permainan Bola Besar</span>
+        </div>
+       </div>
+       <p class="text-gray-300 text-sm leading-relaxed mb-4">Bola basket adalah olahraga tim yang dimainkan oleh dua tim dengan masing-masing 5 pemain. Poin dicetak dengan memasukkan bola ke keranjang lawan. Materi meliputi: <strong class="text-orange-200">dribbling, passing, shooting, lay-up</strong>, peraturan pertandingan, dan taktik permainan.</p>
+       <div class="flex flex-wrap gap-2 mb-4"><span class="bg-orange-800/50 text-orange-200 text-xs px-2 py-1 rounded">Dribbling</span> <span class="bg-orange-800/50 text-orange-200 text-xs px-2 py-1 rounded">Chest Pass</span> <span class="bg-orange-800/50 text-orange-200 text-xs px-2 py-1 rounded">Lay-up</span> <span class="bg-orange-800/50 text-orange-200 text-xs px-2 py-1 rounded">Jump Shot</span>
+       </div><a href="#basket" class="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-semibold px-5 py-2.5 rounded-lg transition-all"> <span>Pelajari Materi</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg></a>
+      </div><!-- Voli -->
+      <div class="card-hover bg-gradient-to-br from-blue-900/50 to-blue-950/50 rounded-2xl p-6 border border-blue-700/30 animate-fade-in" style="animation-delay: 0.3s">
+       <div class="flex items-start gap-4 mb-4">
+        <div class="sport-icon text-5xl">
+         🏐
+        </div>
+        <div>
+         <h3 class="text-2xl font-bold text-blue-300 mb-2">Bola Voli</h3><span class="inline-block bg-blue-500/20 text-blue-300 text-xs px-3 py-1 rounded-full">Permainan Bola Besar</span>
+        </div>
+       </div>
+       <p class="text-gray-300 text-sm leading-relaxed mb-4">Bola voli adalah olahraga tim yang dimainkan oleh dua tim dengan masing-masing 6 pemain. Bola harus dipukul melewati net ke area lawan. Materi meliputi: <strong class="text-blue-200">servis, passing bawah, passing atas, smash, blocking</strong>, rotasi pemain, dan sistem pertandingan.</p>
+       <div class="flex flex-wrap gap-2 mb-4"><span class="bg-blue-800/50 text-blue-200 text-xs px-2 py-1 rounded">Servis</span> <span class="bg-blue-800/50 text-blue-200 text-xs px-2 py-1 rounded">Passing</span> <span class="bg-blue-800/50 text-blue-200 text-xs px-2 py-1 rounded">Smash</span> <span class="bg-blue-800/50 text-blue-200 text-xs px-2 py-1 rounded">Blocking</span>
+       </div><a href="#voli" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-lg transition-all"> <span>Pelajari Materi</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg></a>
+      </div><!-- Bulutangkis -->
+      <div class="card-hover bg-gradient-to-br from-purple-900/50 to-purple-950/50 rounded-2xl p-6 border border-purple-700/30 animate-fade-in" style="animation-delay: 0.4s">
+       <div class="flex items-start gap-4 mb-4">
+        <div class="sport-icon text-5xl">
+         🏸
+        </div>
+        <div>
+         <h3 class="text-2xl font-bold text-purple-300 mb-2">Bulutangkis</h3><span class="inline-block bg-purple-500/20 text-purple-300 text-xs px-3 py-1 rounded-full">Permainan Bola Kecil</span>
+        </div>
+       </div>
+       <p class="text-gray-300 text-sm leading-relaxed mb-4">Bulutangkis adalah olahraga raket yang dimainkan secara tunggal atau ganda. Shuttlecock dipukul melewati net ke area lawan. Materi meliputi: <strong class="text-purple-200">servis, lob, smash, dropshot, netting</strong>, footwork, dan strategi permainan.</p>
+       <div class="flex flex-wrap gap-2 mb-4"><span class="bg-purple-800/50 text-purple-200 text-xs px-2 py-1 rounded">Servis</span> <span class="bg-purple-800/50 text-purple-200 text-xs px-2 py-1 rounded">Smash</span> <span class="bg-purple-800/50 text-purple-200 text-xs px-2 py-1 rounded">Dropshot</span> <span class="bg-purple-800/50 text-purple-200 text-xs px-2 py-1 rounded">Netting</span>
+       </div><a href="#bulutangkis" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-5 py-2.5 rounded-lg transition-all"> <span>Pelajari Materi</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg></a>
+      </div>
+     </div>
+    </div>
+   </section><!-- Video Gallery Section -->
+   <section class="py-12 px-6 bg-black/20">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold mb-3">🎬 Galeri Video Pembelajaran</h2>
+      <p class="text-gray-400 mb-6">Koleksi video tutorial dan demonstrasi teknik olahraga</p>
+     </div><!-- Add Video Form -->
+     <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
+      <h3 class="text-lg font-semibold mb-4 flex items-center gap-2"><span>➕</span> Tambah Video Baru</h3>
+      <form id="video-form" class="grid md:grid-cols-4 gap-4">
+       <div><label class="block text-sm text-gray-400 mb-1">Judul Video</label> <input type="text" id="video-title" placeholder="Masukkan judul" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all">
+       </div>
+       <div><label class="block text-sm text-gray-400 mb-1">Link YouTube</label> <input type="url" id="video-url" placeholder="https://youtube.com/..." required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all">
+       </div>
+       <div><label class="block text-sm text-gray-400 mb-1">Kategori</label> <select id="video-category" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-cyan-400 transition-all"> <option value="" class="bg-gray-800">Pilih Kategori</option> <option value="sepakbola" class="bg-gray-800">⚽ Sepak Bola</option> <option value="basket" class="bg-gray-800">🏀 Basket</option> <option value="voli" class="bg-gray-800">🏐 Voli</option> <option value="bulutangkis" class="bg-gray-800">🏸 Bulutangkis</option> </select>
+       </div>
+       <div class="flex items-end"><button type="submit" id="add-btn" class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold px-6 py-2.5 rounded-lg transition-all flex items-center justify-center gap-2"> <span id="btn-text">Tambah Video</span> <span id="btn-spinner" class="hidden">
+          <svg class="animate-spin h-5 w-5" viewbox="0 0 24 24">
+           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" /><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+          </svg></span> </button>
+       </div>
+      </form>
+      <p id="form-message" class="mt-3 text-sm hidden"></p>
+      <p id="limit-warning" class="mt-3 text-sm text-amber-400 hidden">⚠️ Batas maksimum 999 video telah tercapai. Silakan hapus beberapa video terlebih dahulu.</p>
+     </div><!-- Filter Tabs -->
+     <div class="flex flex-wrap gap-2 mb-6 justify-center"><button onclick="filterVideos('all')" class="filter-btn active bg-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all" data-filter="all"> 📋 Semua </button> <button onclick="filterVideos('sepakbola')" class="filter-btn bg-white/10 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all" data-filter="sepakbola"> ⚽ Sepak Bola </button> <button onclick="filterVideos('basket')" class="filter-btn bg-white/10 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all" data-filter="basket"> 🏀 Basket </button> <button onclick="filterVideos('voli')" class="filter-btn bg-white/10 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all" data-filter="voli"> 🏐 Voli </button> <button onclick="filterVideos('bulutangkis')" class="filter-btn bg-white/10 hover:bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all" data-filter="bulutangkis"> 🏸 Bulutangkis </button>
+     </div><!-- Video Grid -->
+     <div id="video-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="col-span-full text-center py-12 text-gray-400"><span class="text-4xl mb-4 block">🎥</span>
+       <p>Belum ada video. Tambahkan video pertama Anda!</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Video Modal -->
+   <div id="video-modal" class="fixed inset-0 z-50 hidden">
+    <div class="modal-backdrop absolute inset-0 bg-black/80" onclick="closeModal()"></div>
+    <div class="relative z-10 flex items-center justify-center min-h-full p-4">
+     <div class="bg-gray-900 rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-gray-700">
+       <h3 id="modal-title" class="font-semibold text-lg"></h3><button onclick="closeModal()" class="text-gray-400 hover:text-white transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg></button>
+      </div>
+      <div class="aspect-video bg-black"><iframe id="modal-iframe" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+     </div>
+    </div>
+   </div><!-- Footer -->
+   <footer class="py-8 px-6 border-t border-white/10">
+    <div class="max-w-6xl mx-auto text-center">
+     <p class="text-gray-400 text-sm">© 2024 Portal Pembelajaran PJOK - <span id="footer-school">SMAN Taruna Nala Jawa Timur</span></p>
+     <p class="text-gray-500 text-xs mt-2">Dibuat dengan ❤️ untuk pendidikan Indonesia</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Config and state
+    const defaultConfig = {
+      site_title: 'Portal Pembelajaran PJOK',
+      teacher_name: 'Bapak/Ibu Guru PJOK',
+      school_name: 'SMAN Taruna Nala Jawa Timur',
+      font_family: 'Poppins',
+      font_size: 16,
+      background_color: '#0a1628',
+      surface_color: '#1e3a5f',
+      text_color: '#ffffff',
+      primary_action_color: '#0891b2',
+      secondary_action_color: '#9333ea'
+    };
+
+    let videos = [];
+    let currentFilter = 'all';
+    let currentRecordCount = 0;
+
+    const categoryColors = {
+      sepakbola: { bg: 'from-green-600 to-green-700', border: 'border-green-500', icon: '⚽' },
+      basket: { bg: 'from-orange-600 to-orange-700', border: 'border-orange-500', icon: '🏀' },
+      voli: { bg: 'from-blue-600 to-blue-700', border: 'border-blue-500', icon: '🏐' },
+      bulutangkis: { bg: 'from-purple-600 to-purple-700', border: 'border-purple-500', icon: '🏸' }
+    };
+
+    // Extract YouTube Video ID
+    function getYouTubeId(url) {
+      const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+      const match = url.match(regExp);
+      return (match && match[2].length === 11) ? match[2] : null;
+    }
+
+    // Get YouTube Thumbnail
+    function getYouTubeThumbnail(videoId) {
+      return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+    }
+
+    // Render video grid
+    function renderVideos() {
+      const grid = document.getElementById('video-grid');
+      const filteredVideos = currentFilter === 'all' 
+        ? videos 
+        : videos.filter(v => v.category === currentFilter);
+
+      if (filteredVideos.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-12 text-gray-400">
+            <span class="text-4xl mb-4 block">🎥</span>
+            <p>${currentFilter === 'all' ? 'Belum ada video. Tambahkan video pertama Anda!' : 'Tidak ada video untuk kategori ini.'}</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filteredVideos.map(video => {
+        const videoId = getYouTubeId(video.url);
+        const colors = categoryColors[video.category] || categoryColors.sepakbola;
+        const thumbnail = videoId ? getYouTubeThumbnail(videoId) : '';
+
+        return `
+          <div class="video-card bg-white/5 rounded-xl overflow-hidden border border-white/10 group" data-id="${video.__backendId}">
+            <div class="relative aspect-video bg-gray-800 cursor-pointer" onclick="openModal('${video.title}', '${video.url}')">
+              ${videoId ? `
+                <img src="${thumbnail}" alt="${video.title}" class="w-full h-full object-cover" loading="lazy" 
+                  onerror="this.style.display='none'; this.parentElement.querySelector('.placeholder').style.display='flex';">
+                <div class="placeholder hidden absolute inset-0 bg-gradient-to-br ${colors.bg} items-center justify-center">
+                  <span class="text-5xl">${colors.icon}</span>
+                </div>
+              ` : `
+                <div class="absolute inset-0 bg-gradient-to-br ${colors.bg} flex items-center justify-center">
+                  <span class="text-5xl">${colors.icon}</span>
+                </div>
+              `}
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center">
+                  <svg class="w-8 h-8 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute top-2 left-2">
+                <span class="bg-black/60 text-white text-xs px-2 py-1 rounded-full">${colors.icon} ${video.category.charAt(0).toUpperCase() + video.category.slice(1)}</span>
+              </div>
+            </div>
+            <div class="p-4">
+              <h4 class="font-semibold text-white mb-2 line-clamp-2">${video.title}</h4>
+              <div class="flex items-center justify-between">
+                <button onclick="openModal('${video.title}', '${video.url}')" class="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Putar
+                </button>
+                <button onclick="confirmDelete('${video.__backendId}')" class="delete-btn text-gray-500 hover:text-red-400 transition-colors" data-id="${video.__backendId}">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Filter videos
+    function filterVideos(category) {
+      currentFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-cyan-600', 'bg-green-600', 'bg-orange-600', 'bg-blue-600', 'bg-purple-600');
+        btn.classList.add('bg-white/10');
+      });
+      const activeBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
+      activeBtn.classList.remove('bg-white/10');
+      const colorMap = { all: 'bg-cyan-600', sepakbola: 'bg-green-600', basket: 'bg-orange-600', voli: 'bg-blue-600', bulutangkis: 'bg-purple-600' };
+      activeBtn.classList.add('active', colorMap[category]);
+      renderVideos();
+    }
+
+    // Open video modal
+    function openModal(title, url) {
+      const videoId = getYouTubeId(url);
+      if (!videoId) {
+        showMessage('Link YouTube tidak valid', 'error');
+        return;
+      }
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-iframe').src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      document.getElementById('video-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close video modal
+    function closeModal() {
+      document.getElementById('video-modal').classList.add('hidden');
+      document.getElementById('modal-iframe').src = '';
+      document.body.style.overflow = '';
+    }
+
+    // Show message
+    function showMessage(text, type) {
+      const msg = document.getElementById('form-message');
+      msg.textContent = text;
+      msg.className = `mt-3 text-sm ${type === 'error' ? 'text-red-400' : 'text-green-400'}`;
+      msg.classList.remove('hidden');
+      setTimeout(() => msg.classList.add('hidden'), 3000);
+    }
+
+    // Set loading state
+    function setLoading(loading) {
+      const btn = document.getElementById('add-btn');
+      const text = document.getElementById('btn-text');
+      const spinner = document.getElementById('btn-spinner');
+      btn.disabled = loading;
+      text.textContent = loading ? 'Menyimpan...' : 'Tambah Video';
+      spinner.classList.toggle('hidden', !loading);
+    }
+
+    // Confirm delete with inline UI
+    let deleteTarget = null;
+
+    function confirmDelete(id) {
+      const card = document.querySelector(`[data-id="${id}"]`);
+      const btn = card.querySelector('.delete-btn');
+      
+      if (deleteTarget === id) {
+        deleteVideo(id);
+        deleteTarget = null;
+      } else {
+        deleteTarget = id;
+        btn.innerHTML = `<span class="text-xs text-red-400 font-medium">Klik lagi untuk hapus</span>`;
+        setTimeout(() => {
+          if (deleteTarget === id) {
+            btn.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>`;
+            deleteTarget = null;
+          }
+        }, 3000);
+      }
+    }
+
+    // Delete video
+    async function deleteVideo(id) {
+      const video = videos.find(v => v.__backendId === id);
+      if (!video) return;
+
+      const result = await window.dataSdk.delete(video);
+      if (result.isOk) {
+        showMessage('Video berhasil dihapus', 'success');
+      } else {
+        showMessage('Gagal menghapus video', 'error');
+      }
+    }
+
+    // Data handler for SDK
+    const dataHandler = {
+      onDataChanged(data) {
+        videos = data;
+        currentRecordCount = data.length;
+        
+        const limitWarning = document.getElementById('limit-warning');
+        if (currentRecordCount >= 999) {
+          limitWarning.classList.remove('hidden');
+        } else {
+          limitWarning.classList.add('hidden');
+        }
+        
+        renderVideos();
+      }
+    };
+
+    // Form submission
+    document.getElementById('video-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (currentRecordCount >= 999) {
+        showMessage('Batas maksimum 999 video telah tercapai', 'error');
+        return;
+      }
+
+      const title = document.getElementById('video-title').value.trim();
+      const url = document.getElementById('video-url').value.trim();
+      const category = document.getElementById('video-category').value;
+
+      if (!title || !url || !category) {
+        showMessage('Mohon lengkapi semua field', 'error');
+        return;
+      }
+
+      const videoId = getYouTubeId(url);
+      if (!videoId) {
+        showMessage('Link YouTube tidak valid', 'error');
+        return;
+      }
+
+      setLoading(true);
+
+      const result = await window.dataSdk.create({
+        id: Date.now().toString(),
+        title,
+        url,
+        category,
+        createdAt: new Date().toISOString()
+      });
+
+      setLoading(false);
+
+      if (result.isOk) {
+        document.getElementById('video-form').reset();
+        showMessage('Video berhasil ditambahkan!', 'success');
+      } else {
+        showMessage('Gagal menyimpan video', 'error');
+      }
+    });
+
+    // Element SDK handlers
+    async function onConfigChange(config) {
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const fontSize = config.font_size || defaultConfig.font_size;
+      
+      document.body.style.fontFamily = `${fontFamily}, sans-serif`;
+      
+      document.getElementById('main-title').textContent = config.site_title || defaultConfig.site_title;
+      document.getElementById('teacher-info').textContent = `Guru Pengampu: ${config.teacher_name || defaultConfig.teacher_name}`;
+      document.getElementById('school-badge').textContent = config.school_name || defaultConfig.school_name;
+      document.getElementById('footer-school').textContent = config.school_name || defaultConfig.school_name;
+
+      // Apply colors
+      document.body.style.setProperty('--bg-color', config.background_color || defaultConfig.background_color);
+      document.body.style.setProperty('--surface-color', config.surface_color || defaultConfig.surface_color);
+      document.body.style.setProperty('--text-color', config.text_color || defaultConfig.text_color);
+      document.body.style.setProperty('--primary-color', config.primary_action_color || defaultConfig.primary_action_color);
+      document.body.style.setProperty('--secondary-color', config.secondary_action_color || defaultConfig.secondary_action_color);
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => { config.background_color = value; window.elementSdk.setConfig({ background_color: value }); }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => { config.surface_color = value; window.elementSdk.setConfig({ surface_color: value }); }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => { config.text_color = value; window.elementSdk.setConfig({ text_color: value }); }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => { config.primary_action_color = value; window.elementSdk.setConfig({ primary_action_color: value }); }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => { config.secondary_action_color = value; window.elementSdk.setConfig({ secondary_action_color: value }); }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => { config.font_family = value; window.elementSdk.setConfig({ font_family: value }); }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => { config.font_size = value; window.elementSdk.setConfig({ font_size: value }); }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['site_title', config.site_title || defaultConfig.site_title],
+        ['teacher_name', config.teacher_name || defaultConfig.teacher_name],
+        ['school_name', config.school_name || defaultConfig.school_name]
+      ]);
+    }
+
+    // Initialize SDKs
+    async function init() {
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange,
+          mapToCapabilities,
+          mapToEditPanelValues
+        });
+      }
+
+      if (window.dataSdk) {
+        const result = await window.dataSdk.init(dataHandler);
+        if (!result.isOk) {
+          console.error('Failed to initialize data SDK');
+        }
+      }
+    }
+
+    init();
+
+    // Keyboard support for modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dafb8ef25a2823b',t:'MTc3MzI4NjI0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
